@@ -63,7 +63,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-This will create sample users, fellowships, and data for testing.
+This will create sample users, fellowships, and data for initial setup.
 
 ### Step 8: Start the Application
 
@@ -77,51 +77,57 @@ The application will be available at: `http://localhost:8000`
 
 After seeding, you can login with these accounts:
 
-| Role | Email | Password | Description |
-|------|-------|----------|-------------|
-| **Admin** | admin@firstlove.church | password | Full system access |
-| **Pastor** | pastor@firstlove.church | password | Oversee all fellowships |
-| **Treasurer** | treasurer@firstlove.church | password | Manage offerings |
-| **Leader** | james@firstlove.church | password | UNILUS Fellowship Leader |
-| **Leader** | grace@firstlove.church | password | CBU Fellowship Leader |
-| **Member** | peter@firstlove.church | password | Regular member |
+| Role | Name | Email | Password | Description |
+|------|------|-------|----------|-------------|
+| **Admin** | System Administrator | admin@firstlove.church | password | Full system access |
+| **Pastor** | Pastor John Mwale | pastor@firstlove.church | password | Oversee all fellowships |
+| **Treasurer** | Mary Banda | treasurer@firstlove.church | password | Manage offerings |
+| **Leader** | James Phiri | james@firstlove.church | password | UNILUS Fellowship Leader |
+| **Leader** | Grace Mulenga | grace@firstlove.church | password | CBU Fellowship Leader |
+| **Member** | Peter Mwanza | peter@firstlove.church | password | Regular member |
 
-## 📋 Sample Data Included
+⚠️ **Important:** Change these default passwords before production use!
 
-The system comes pre-loaded with:
+## 📋 System Features
+
+The system comes pre-configured with:
 
 - **4 Fellowships**: UNILUS, CBU, Youth, Women's
-- **15+ Users** across all roles
-- **8 weeks** of attendance records
-- **8 weeks** of offering data
-- **4 Announcements** with different priorities
-- Realistic phone numbers and names
+- **15+ Users** across all roles with realistic names
+- **8 weeks** of historical attendance records
+- **8 weeks** of offering data with different payment methods
+- **4 Church announcements** with different priorities
+- **Professional UI** with church branding
 
-## 🎯 Testing the System
+## 🎯 Using the System
 
 ### As an Admin:
 1. Login with admin credentials
-2. View overall statistics
-3. Manage users and fellowships
-4. Access all reports
+2. View comprehensive statistics dashboard
+3. Manage users across all roles
+4. Oversee all fellowships and activities
+5. Access complete system reports
 
 ### As a Pastor:
 1. Login with pastor credentials
-2. View fellowships under your oversight
-3. Monitor attendance and offerings
-4. Create announcements
+2. Monitor fellowships under your oversight
+3. Review attendance and offering trends
+4. Create church-wide announcements
+5. Generate pastoral reports
 
 ### As a Fellowship Leader:
 1. Login with leader credentials
-2. Record weekly attendance
-3. Submit offering reports
-4. View your fellowship statistics
+2. Record weekly attendance for your fellowship
+3. Submit offering reports for confirmation
+4. View your fellowship's growth statistics
+5. Manage fellowship member information
 
 ### As a Treasurer:
 1. Login with treasurer credentials
-2. Review pending offerings
-3. Confirm or reject submissions
+2. Review all pending offering submissions
+3. Confirm or request clarification on offerings
 4. Generate financial reports
+5. Monitor church financial health
 
 ## 🛠️ Troubleshooting
 
@@ -159,36 +165,67 @@ php artisan migrate:fresh --seed
 ### For Online Hosting:
 
 1. **Upload files** to your hosting provider
-2. **Update .env** with production database settings
-3. **Set APP_ENV=production** and **APP_DEBUG=false**
-4. **Run migrations** on production database
-5. **Configure web server** to point to `public/` folder
+2. **Update .env** with production database settings:
+   ```env
+   APP_ENV=production
+   APP_DEBUG=false
+   DB_HOST=your_production_host
+   DB_DATABASE=your_production_database
+   DB_USERNAME=your_production_username
+   DB_PASSWORD=your_production_password
+   ```
+3. **Run migrations** on production database
+4. **Configure web server** to point to `public/` folder
 
 ### Security Checklist:
 - [ ] Change all default passwords
 - [ ] Set strong APP_KEY
-- [ ] Enable HTTPS
-- [ ] Set proper file permissions
-- [ ] Configure backup system
+- [ ] Enable HTTPS/SSL
+- [ ] Set proper file permissions (755 for directories, 644 for files)
+- [ ] Configure automated database backups
+- [ ] Update church contact information
+- [ ] Remove development tools and debug information
 
-## 📞 Support
+## 📱 Mobile Access
 
-For help with setup or usage:
+The system is fully responsive and works on:
+- Desktop computers
+- Tablets (iPad, Android tablets)
+- Mobile phones (iOS, Android)
+- All modern web browsers
 
+## 📞 Support & Maintenance
+
+### For Technical Issues:
 1. Check the main **README.md** for detailed documentation
 2. Review Laravel documentation at [https://laravel.com/docs](https://laravel.com/docs)
 3. Contact your system administrator
 
+### Regular Maintenance:
+- Weekly database backups
+- Monthly password updates for active users
+- Quarterly system updates and security patches
+- Annual review of user accounts and permissions
+
+## 📈 System Growth
+
+As your church grows, the system can be expanded with:
+- Additional fellowship creation
+- New user role types
+- Enhanced reporting features
+- Integration with other church tools
+- Mobile app development
+
 ## 🎉 Congratulations!
 
-Your First Love Church Management System is now ready to use. Start by exploring the different dashboards and familiarizing yourself with the features.
+Your First Love Church Management System is now ready for full church operations. The system provides a professional, secure, and user-friendly platform for managing your church community.
 
 **Next Steps:**
-1. Change default passwords
-2. Add real fellowship members
-3. Start recording actual attendance
-4. Configure announcements
-5. Train users on the system
+1. Customize church information and branding
+2. Train fellowship leaders on system usage
+3. Begin recording actual attendance and offerings
+4. Set up regular backup procedures
+5. Plan for future enhancements
 
 ---
 
